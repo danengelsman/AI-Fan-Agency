@@ -4,7 +4,6 @@ import {
   Sparkles,
   Shield,
   TrendingUp,
-  Users,
   Heart,
   MessageCircle,
   DollarSign,
@@ -38,14 +37,14 @@ function Navbar() {
         scrolled && 'bg-[#0a0a0f]/80 backdrop-blur-xl border-b border-white/5'
       )}
     >
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#ff2d7e] to-[#a855f7] flex items-center justify-center">
-            <Bot className="w-5 h-5 text-white" />
+          <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-[#ff2d7e] to-[#a855f7] flex items-center justify-center">
+            <Bot className="w-4 h-4 text-white" />
           </div>
-          <span className="font-bold text-lg tracking-tight">AI Fan Agency</span>
+          <span className="font-bold text-base tracking-tight">AI Fan Agency</span>
         </div>
-        <div className="hidden md:flex items-center gap-8 text-sm text-[#a0a0b0]">
+        <div className="hidden md:flex items-center gap-6 text-sm text-[#a0a0b0]">
           <a href="#features" className="hover:text-white transition-colors">Features</a>
           <a href="#how-it-works" className="hover:text-white transition-colors">How It Works</a>
           <a href="#pricing" className="hover:text-white transition-colors">Pricing</a>
@@ -53,7 +52,7 @@ function Navbar() {
         </div>
         <a
           href="#pricing"
-          className="bg-gradient-to-r from-[#ff2d7e] to-[#a855f7] text-white text-sm font-semibold px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
+          className="bg-gradient-to-r from-[#ff2d7e] to-[#a855f7] text-white text-xs font-semibold px-3.5 py-1.5 rounded-lg hover:opacity-90 transition-opacity"
         >
           Get Started
         </a>
@@ -65,30 +64,30 @@ function Navbar() {
 // ─── Hero ───────────────────────────────────────────────────────────────────
 function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-14">
       {/* Background gradient orbs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] rounded-full bg-[#ff2d7e]/20 blur-[120px]" />
-        <div className="absolute bottom-1/4 -right-1/4 w-[600px] h-[600px] rounded-full bg-[#a855f7]/20 blur-[120px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[400px] h-[400px] rounded-full bg-[#3b82f6]/10 blur-[100px]" />
+        <div className="absolute top-1/4 -left-1/4 w-[500px] h-[500px] rounded-full bg-[#ff2d7e]/20 blur-[120px]" />
+        <div className="absolute bottom-1/4 -right-1/4 w-[500px] h-[500px] rounded-full bg-[#a855f7]/20 blur-[120px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[300px] h-[300px] rounded-full bg-[#3b82f6]/10 blur-[100px]" />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 text-sm text-[#a0a0b0] mb-6"
+          transition={{ duration: 0.5 }}
+          className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-3 py-1 text-xs sm:text-sm text-[#a0a0b0] mb-5"
         >
-          <Shield className="w-4 h-4 text-[#ff2d7e]" />
+          <Shield className="w-3.5 h-3.5 text-[#ff2d7e]" />
           The AI that doesn't lie to you
         </motion.div>
 
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.05]"
+          transition={{ duration: 0.5, delay: 0.05 }}
+          className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]"
         >
           Build AI influencers.
           <br />
@@ -100,30 +99,30 @@ function Hero() {
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-lg md:text-xl text-[#a0a0b0] mt-6 max-w-2xl mx-auto"
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="text-sm sm:text-base md:text-lg text-[#a0a0b0] mt-4 max-w-xl mx-auto leading-relaxed"
         >
           Done-for-you AI persona creation, content automation, and fan engagement —
           with disclosed AI that keeps you on the right side of the platforms.
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10"
+          transition={{ duration: 0.5, delay: 0.15 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-8"
         >
           <a
             href="#pricing"
-            className="bg-gradient-to-r from-[#ff2d7e] to-[#a855f7] text-white font-semibold px-8 py-3.5 rounded-xl text-lg hover:opacity-90 transition-opacity flex items-center gap-2"
+            className="bg-gradient-to-r from-[#ff2d7e] to-[#a855f7] text-white font-semibold px-5 py-2.5 rounded-lg text-sm hover:opacity-90 transition-opacity flex items-center gap-2 w-full sm:w-auto justify-center"
           >
-            Start Building <ArrowRight className="w-5 h-5" />
+            Start Building <ArrowRight className="w-4 h-4" />
           </a>
           <a
             href="#how-it-works"
-            className="border border-white/15 text-white font-semibold px-8 py-3.5 rounded-xl text-lg hover:bg-white/5 transition-colors"
+            className="border border-white/15 text-white font-semibold px-5 py-2.5 rounded-lg text-sm hover:bg-white/5 transition-colors w-full sm:w-auto text-center"
           >
             See How It Works
           </a>
@@ -133,8 +132,8 @@ function Hero() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="grid grid-cols-3 gap-8 mt-16 max-w-2xl mx-auto"
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="grid grid-cols-3 gap-4 sm:gap-6 mt-12 max-w-lg mx-auto"
         >
           {[
             { label: 'Avg monthly earnings', value: '$4,200' },
@@ -142,8 +141,8 @@ function Hero() {
             { label: 'AI disclosure', value: '100%' },
           ].map((s) => (
             <div key={s.label}>
-              <div className="text-2xl md:text-3xl font-bold text-white">{s.value}</div>
-              <div className="text-sm text-[#a0a0b0] mt-1">{s.label}</div>
+              <div className="text-xl sm:text-2xl font-bold text-white">{s.value}</div>
+              <div className="text-xs text-[#a0a0b0] mt-0.5">{s.label}</div>
             </div>
           ))}
         </motion.div>
@@ -194,35 +193,36 @@ const features = [
 
 function Features() {
   return (
-    <section id="features" className="py-24 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+    <section id="features" className="py-16 md:py-20 px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-10 md:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
             Everything you need to
+            <br className="md:hidden" />
             <span className="bg-gradient-to-r from-[#ff2d7e] to-[#a855f7] bg-clip-text text-transparent"> run an AI influencer agency</span>
           </h2>
-          <p className="text-[#a0a0b0] mt-4 max-w-2xl mx-auto text-lg">
+          <p className="text-sm sm:text-base text-[#a0a0b0] mt-3 max-w-xl mx-auto">
             Persona creation, content pipelines, fan engagement, analytics — all in one platform.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
           {features.map((f, i) => (
             <motion.div
               key={f.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.05 }}
-              className="bg-[#12121a] border border-white/5 rounded-2xl p-6 hover:border-white/10 transition-colors group"
+              transition={{ duration: 0.3, delay: i * 0.05 }}
+              className="bg-[#12121a] border border-white/5 rounded-xl p-5 hover:border-white/10 transition-colors"
             >
               <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
+                className="w-10 h-10 rounded-lg flex items-center justify-center mb-3"
                 style={{ background: `${f.color}15` }}
               >
-                <f.icon className="w-6 h-6" style={{ color: f.color }} />
+                <f.icon className="w-5 h-5" style={{ color: f.color }} />
               </div>
-              <h3 className="text-lg font-semibold mb-2">{f.title}</h3>
+              <h3 className="text-base font-semibold mb-1.5">{f.title}</h3>
               <p className="text-sm text-[#a0a0b0] leading-relaxed">{f.desc}</p>
             </motion.div>
           ))}
@@ -262,37 +262,37 @@ const steps = [
 
 function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-24 px-6 bg-[#12121a]/50">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+    <section id="how-it-works" className="py-16 md:py-20 px-4 sm:px-6 bg-[#12121a]/50">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-10 md:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
             From zero to
             <span className="bg-gradient-to-r from-[#a855f7] to-[#3b82f6] bg-clip-text text-transparent"> earning in 4 steps</span>
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {steps.map((s, i) => (
             <motion.div
               key={s.num}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
+              transition={{ duration: 0.3, delay: i * 0.08 }}
               className="relative"
             >
-              <div className="bg-[#0a0a0f] border border-white/5 rounded-2xl p-6 h-full">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-3xl font-bold text-[#ff2d7e]/30">{s.num}</span>
-                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center">
-                    <s.icon className="w-5 h-5 text-[#ff2d7e]" />
+              <div className="bg-[#0a0a0f] border border-white/5 rounded-xl p-5 h-full">
+                <div className="flex items-center gap-2.5 mb-3">
+                  <span className="text-2xl font-bold text-[#ff2d7e]/30">{s.num}</span>
+                  <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center">
+                    <s.icon className="w-4.5 h-4.5 text-[#ff2d7e]" />
                   </div>
                 </div>
-                <h3 className="font-semibold text-lg mb-2">{s.title}</h3>
+                <h3 className="font-semibold text-base mb-1.5">{s.title}</h3>
                 <p className="text-sm text-[#a0a0b0] leading-relaxed">{s.desc}</p>
               </div>
               {i < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-px bg-white/10" />
+                <div className="hidden lg:block absolute top-1/2 -right-2.5 w-5 h-px bg-white/10" />
               )}
             </motion.div>
           ))}
@@ -305,30 +305,30 @@ function HowItWorks() {
 // ─── Why Disclosed AI ────────────────────────────────────────────────────────
 function WhyDisclosed() {
   return (
-    <section className="py-24 px-6">
-      <div className="max-w-4xl mx-auto">
-        <div className="bg-gradient-to-br from-[#ff2d7e]/10 via-[#a855f7]/5 to-transparent border border-[#ff2d7e]/20 rounded-3xl p-8 md:p-12">
-          <div className="flex items-center gap-3 mb-6">
-            <Shield className="w-8 h-8 text-[#ff2d7e]" />
-            <h2 className="text-3xl md:text-4xl font-bold">Why disclosed AI wins</h2>
+    <section className="py-16 md:py-20 px-4 sm:px-6">
+      <div className="max-w-3xl mx-auto">
+        <div className="bg-gradient-to-br from-[#ff2d7e]/10 via-[#a855f7]/5 to-transparent border border-[#ff2d7e]/20 rounded-2xl p-6 sm:p-8 md:p-10">
+          <div className="flex items-center gap-2.5 mb-4">
+            <Shield className="w-6 h-6 text-[#ff2d7e]" />
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">Why disclosed AI wins</h2>
           </div>
-          <p className="text-lg text-[#a0a0b0] leading-relaxed mb-8">
+          <p className="text-sm sm:text-base text-[#a0a0b0] leading-relaxed mb-4">
             Other agencies depend on fans not knowing it's AI. That's a business model with an
             expiration date — platforms are rolling out mandatory AI labels, and undisclosed AI
             monetization invites chargebacks and regulatory attention.
           </p>
-          <p className="text-lg text-[#a0a0b0] leading-relaxed mb-8">
+          <p className="text-sm sm:text-base text-[#a0a0b0] leading-relaxed mb-6">
             We compete on transparency. Every message carries an AI label. Fans who prefer
             disclosed AI are a growing, loyal audience — and they stay because they trust you.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {[
               { icon: Shield, label: 'Platform compliant' },
               { icon: Heart, label: 'Higher retention' },
               { icon: TrendingUp, label: '0.6% refund rate' },
             ].map((b) => (
-              <div key={b.label} className="flex items-center gap-3 bg-white/5 rounded-xl p-4">
-                <b.icon className="w-5 h-5 text-[#ff2d7e]" />
+              <div key={b.label} className="flex items-center gap-2.5 bg-white/5 rounded-lg p-3">
+                <b.icon className="w-4 h-4 text-[#ff2d7e] shrink-0" />
                 <span className="text-sm font-medium">{b.label}</span>
               </div>
             ))}
@@ -363,26 +363,26 @@ const testimonials = [
 
 function Testimonials() {
   return (
-    <section className="py-24 px-6 bg-[#12121a]/50">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+    <section className="py-16 md:py-20 px-4 sm:px-6 bg-[#12121a]/50">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-10 md:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
             Real operators.
             <span className="bg-gradient-to-r from-[#ff2d7e] to-[#a855f7] bg-clip-text text-transparent"> Real results.</span>
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-3 gap-4 md:gap-5">
           {testimonials.map((t) => (
-            <div key={t.name} className="bg-[#0a0a0f] border border-white/5 rounded-2xl p-6">
-              <div className="flex gap-1 mb-4">
+            <div key={t.name} className="bg-[#0a0a0f] border border-white/5 rounded-xl p-5">
+              <div className="flex gap-0.5 mb-3">
                 {Array.from({ length: t.stars }).map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-[#ff2d7e] fill-[#ff2d7e]" />
+                  <Star key={i} className="w-3.5 h-3.5 text-[#ff2d7e] fill-[#ff2d7e]" />
                 ))}
               </div>
               <p className="text-sm text-[#a0a0b0] leading-relaxed mb-4">"{t.quote}"</p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#ff2d7e] to-[#a855f7] flex items-center justify-center text-white font-semibold text-sm">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#ff2d7e] to-[#a855f7] flex items-center justify-center text-white font-semibold text-xs">
                   {t.name[0]}
                 </div>
                 <div>
@@ -455,50 +455,50 @@ const tiers = [
 
 function Pricing() {
   return (
-    <section id="pricing" className="py-24 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+    <section id="pricing" className="py-16 md:py-20 px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-10 md:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
             Pick your
             <span className="bg-gradient-to-r from-[#ff2d7e] to-[#a855f7] bg-clip-text text-transparent"> tier</span>
           </h2>
-          <p className="text-[#a0a0b0] mt-4 text-lg">Don't earn, you don't pay. Cancel anytime.</p>
+          <p className="text-sm text-[#a0a0b0] mt-2">Don't earn, you don't pay. Cancel anytime.</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 items-start">
+        <div className="grid md:grid-cols-3 gap-4 md:gap-5 items-stretch">
           {tiers.map((t) => (
             <div
               key={t.name}
               className={cls(
-                'rounded-2xl p-8 border transition-all',
+                'rounded-xl p-6 border transition-all flex flex-col',
                 t.highlight
-                  ? 'bg-gradient-to-b from-[#ff2d7e]/10 to-[#0a0a0f] border-[#ff2d7e]/30 scale-[1.02]'
+                  ? 'bg-gradient-to-b from-[#ff2d7e]/10 to-[#0a0a0f] border-[#ff2d7e]/30 md:scale-[1.03]'
                   : 'bg-[#12121a] border-white/5 hover:border-white/10'
               )}
             >
               {t.badge && (
-                <div className="inline-flex items-center gap-1.5 bg-gradient-to-r from-[#ff2d7e] to-[#a855f7] text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">
+                <div className="inline-flex items-center gap-1 bg-gradient-to-r from-[#ff2d7e] to-[#a855f7] text-white text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3 w-fit">
                   <Zap className="w-3 h-3" /> {t.badge}
                 </div>
               )}
-              <h3 className="text-xl font-bold mb-1">{t.name}</h3>
-              <p className="text-sm text-[#a0a0b0] mb-4">{t.desc}</p>
-              <div className="flex items-baseline gap-1 mb-6">
-                <span className="text-4xl font-bold">{t.price}</span>
-                <span className="text-[#a0a0b0]">{t.period}</span>
+              <h3 className="text-lg font-bold mb-0.5">{t.name}</h3>
+              <p className="text-sm text-[#a0a0b0] mb-3">{t.desc}</p>
+              <div className="flex items-baseline gap-1 mb-4">
+                <span className="text-3xl font-bold">{t.price}</span>
+                <span className="text-sm text-[#a0a0b0]">{t.period}</span>
               </div>
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-2 mb-5 flex-1">
                 {t.features.map((f) => (
                   <li key={f} className="flex items-start gap-2 text-sm">
-                    <Check className="w-4 h-4 text-[#ff2d7e] mt-0.5 shrink-0" />
+                    <Check className="w-3.5 h-3.5 text-[#ff2d7e] mt-0.5 shrink-0" />
                     <span className="text-[#a0a0b0]">{f}</span>
                   </li>
                 ))}
               </ul>
               <a
-                href={t.name === 'Done For You' ? '#contact' : '#contact'}
+                href="#contact"
                 className={cls(
-                  'block text-center font-semibold py-3 rounded-xl transition-all',
+                  'block text-center font-semibold py-2.5 rounded-lg text-sm transition-all',
                   t.highlight
                     ? 'bg-gradient-to-r from-[#ff2d7e] to-[#a855f7] text-white hover:opacity-90'
                     : 'border border-white/15 text-white hover:bg-white/5'
@@ -546,22 +546,22 @@ function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-24 px-6 bg-[#12121a]/50">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-4xl font-bold tracking-tight text-center mb-12">
+    <section id="faq" className="py-16 md:py-20 px-4 sm:px-6 bg-[#12121a]/50">
+      <div className="max-w-2xl mx-auto">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-center mb-8 md:mb-10">
           Questions?
           <span className="bg-gradient-to-r from-[#ff2d7e] to-[#a855f7] bg-clip-text text-transparent"> We've got answers.</span>
         </h2>
-        <div className="space-y-3">
+        <div className="space-y-2.5">
           {faqs.map((f, i) => (
-            <div key={i} className="bg-[#0a0a0f] border border-white/5 rounded-xl overflow-hidden">
+            <div key={i} className="bg-[#0a0a0f] border border-white/5 rounded-lg overflow-hidden">
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-center justify-between p-5 text-left"
+                className="w-full flex items-center justify-between p-4 text-left"
               >
-                <span className="font-medium">{f.q}</span>
+                <span className="text-sm font-medium pr-3">{f.q}</span>
                 <ChevronDown
-                  className={cls('w-5 h-5 text-[#a0a0b0] transition-transform', open === i && 'rotate-180')}
+                  className={cls('w-4 h-4 text-[#a0a0b0] transition-transform shrink-0', open === i && 'rotate-180')}
                 />
               </button>
               <AnimatePresence>
@@ -572,7 +572,7 @@ function FAQ() {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <p className="px-5 pb-5 text-sm text-[#a0a0b0] leading-relaxed">{f.a}</p>
+                    <p className="px-4 pb-4 text-sm text-[#a0a0b0] leading-relaxed">{f.a}</p>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -587,26 +587,26 @@ function FAQ() {
 // ─── CTA / Contact ────────────────────────────────────────────────────────────
 function FinalCTA() {
   return (
-    <section id="contact" className="py-24 px-6">
-      <div className="max-w-3xl mx-auto text-center">
-        <div className="bg-gradient-to-br from-[#ff2d7e]/10 via-[#a855f7]/10 to-transparent border border-white/10 rounded-3xl p-10 md:p-16">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+    <section id="contact" className="py-16 md:py-20 px-4 sm:px-6">
+      <div className="max-w-2xl mx-auto text-center">
+        <div className="bg-gradient-to-br from-[#ff2d7e]/10 via-[#a855f7]/10 to-transparent border border-white/10 rounded-2xl p-8 md:p-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3">
             Ready to build your
             <span className="bg-gradient-to-r from-[#ff2d7e] to-[#a855f7] bg-clip-text text-transparent"> AI empire?</span>
           </h2>
-          <p className="text-lg text-[#a0a0b0] mb-8">
+          <p className="text-sm sm:text-base text-[#a0a0b0] mb-6">
             Start at $49/mo or book a free call for the Done-For-You tier.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
               href="#pricing"
-              className="bg-gradient-to-r from-[#ff2d7e] to-[#a855f7] text-white font-semibold px-8 py-3.5 rounded-xl text-lg hover:opacity-90 transition-opacity"
+              className="bg-gradient-to-r from-[#ff2d7e] to-[#a855f7] text-white font-semibold px-5 py-2.5 rounded-lg text-sm hover:opacity-90 transition-opacity w-full sm:w-auto"
             >
               Get Started Now
             </a>
             <a
               href="mailto:hello@aifanagency.com"
-              className="border border-white/15 text-white font-semibold px-8 py-3.5 rounded-xl text-lg hover:bg-white/5 transition-colors"
+              className="border border-white/15 text-white font-semibold px-5 py-2.5 rounded-lg text-sm hover:bg-white/5 transition-colors w-full sm:w-auto"
             >
               Schedule Your Call
             </a>
@@ -620,16 +620,16 @@ function FinalCTA() {
 // ─── Footer ──────────────────────────────────────────────────────────────────
 function Footer() {
   return (
-    <footer className="border-t border-white/5 py-12 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row items-start justify-between gap-8 mb-8">
+    <footer className="border-t border-white/5 py-8 md:py-10 px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-6 mb-6">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#ff2d7e] to-[#a855f7] flex items-center justify-center">
-              <Bot className="w-5 h-5 text-white" />
+            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-[#ff2d7e] to-[#a855f7] flex items-center justify-center">
+              <Bot className="w-4 h-4 text-white" />
             </div>
-            <span className="font-bold text-lg">AI Fan Agency</span>
+            <span className="font-bold text-base">AI Fan Agency</span>
           </div>
-          <div className="flex gap-8 text-sm text-[#a0a0b0]">
+          <div className="flex gap-6 text-sm text-[#a0a0b0]">
             <a href="#features" className="hover:text-white">Features</a>
             <a href="#pricing" className="hover:text-white">Pricing</a>
             <a href="#faq" className="hover:text-white">FAQ</a>
@@ -638,8 +638,8 @@ function Footer() {
         </div>
 
         {/* Disclaimer */}
-        <div className="border-t border-white/5 pt-8">
-          <p className="text-xs text-[#a0a0b0] leading-relaxed max-w-4xl">
+        <div className="border-t border-white/5 pt-6">
+          <p className="text-xs text-[#a0a0b0] leading-relaxed max-w-3xl">
             <strong className="text-white">Income Disclaimer:</strong> AI Fan Agency does not guarantee
             any specific earnings. Income figures shown are estimates based on active operators and are
             not typical for all users. Your results depend on your effort, skill, platform policies, market
