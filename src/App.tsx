@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   Sparkles,
   Shield,
@@ -73,20 +72,14 @@ function Hero() {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+        <div
           className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-3 py-1 text-xs sm:text-sm text-[#a0a0b0] mb-5"
         >
           <Shield className="w-3.5 h-3.5 text-[#ff2d7e]" />
           The AI that doesn't lie to you
-        </motion.div>
+        </div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.05 }}
+        <h1
           className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]"
         >
           Build AI influencers.
@@ -96,22 +89,16 @@ function Hero() {
           </span>
           <br />
           Never show your face.
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+        <p
           className="text-sm sm:text-base md:text-lg text-[#a0a0b0] mt-4 max-w-xl mx-auto leading-relaxed"
         >
           Done-for-you AI persona creation, content automation, and fan engagement —
           with disclosed AI that keeps you on the right side of the platforms.
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.15 }}
+        <div
           className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-8"
         >
           <a
@@ -126,13 +113,10 @@ function Hero() {
           >
             See How It Works
           </a>
-        </motion.div>
+        </div>
 
         {/* Stats strip */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+        <div
           className="grid grid-cols-3 gap-4 sm:gap-6 mt-12 max-w-lg mx-auto"
         >
           {[
@@ -145,7 +129,7 @@ function Hero() {
               <div className="text-xs text-[#a0a0b0] mt-0.5">{s.label}</div>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
@@ -208,12 +192,8 @@ function Features() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
           {features.map((f, i) => (
-            <motion.div
+            <div
               key={f.title}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: i * 0.05 }}
               className="bg-[#12121a] border border-white/5 rounded-xl p-5 hover:border-white/10 transition-colors"
             >
               <div
@@ -224,7 +204,7 @@ function Features() {
               </div>
               <h3 className="text-base font-semibold mb-1.5">{f.title}</h3>
               <p className="text-sm text-[#a0a0b0] leading-relaxed">{f.desc}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
@@ -273,12 +253,8 @@ function HowItWorks() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {steps.map((s, i) => (
-            <motion.div
+            <div
               key={s.num}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: i * 0.08 }}
               className="relative"
             >
               <div className="bg-[#0a0a0f] border border-white/5 rounded-xl p-5 h-full">
@@ -294,7 +270,7 @@ function HowItWorks() {
               {i < steps.length - 1 && (
                 <div className="hidden lg:block absolute top-1/2 -right-2.5 w-5 h-px bg-white/10" />
               )}
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
@@ -564,18 +540,14 @@ function FAQ() {
                   className={cls('w-4 h-4 text-[#a0a0b0] transition-transform shrink-0', open === i && 'rotate-180')}
                 />
               </button>
-              <AnimatePresence>
+              
                 {open === i && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
+                  <div
                   >
                     <p className="px-4 pb-4 text-sm text-[#a0a0b0] leading-relaxed">{f.a}</p>
-                  </motion.div>
+                  </div>
                 )}
-              </AnimatePresence>
+              
             </div>
           ))}
         </div>
