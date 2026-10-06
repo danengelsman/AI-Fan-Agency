@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react';
+import PersonaShowcase from './components/PersonaShowcase';
+import BrandMark from './components/BrandMark';
+import BrandWordmark from './components/BrandWordmark';
 import {
   Sparkles, Shield, TrendingUp, Heart, MessageCircle, DollarSign,
-  Calendar, Bot, Check, ArrowRight, Star, Zap, Globe, Lock, ChevronDown,
+  Calendar, Check, ArrowRight, Star, Zap, Globe, Lock, ChevronDown,
 } from 'lucide-react';
 
 // ─── Helpers ────────────────────────────────────────────────────────────────
-const cls = (...c) => c.filter(Boolean).join(' ');
+const cls = (...c: (string | false | null | undefined)[]) => c.filter(Boolean).join(' ');
 
 // Apple-style pill buttons, sized to their text
 const btnPrimary =
@@ -25,10 +28,8 @@ function Navbar() {
     <nav className={cls('fixed top-0 left-0 right-0 z-50 transition-all duration-300', scrolled ? 'bg-[#0a0a0f]/80 backdrop-blur-xl border-b border-white/5' : 'bg-transparent')}>
       <div className="max-w-5xl mx-auto px-5 h-12 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-md bg-gradient-to-br from-[#ff2d7e] to-[#a855f7] flex items-center justify-center">
-            <Bot className="w-3.5 h-3.5 text-white" />
-          </div>
-          <span className="font-semibold text-sm tracking-tight text-white">AI Fan Agency</span>
+          <BrandMark size={28} />
+          <BrandWordmark />
         </a>
         <div className="hidden md:flex items-center gap-7 text-xs text-[#a0a0b0]">
           <a href="#features" className="hover:text-white transition-colors">Features</a>
@@ -300,7 +301,7 @@ const faqs = [
 ];
 
 function FAQ() {
-  const [open, setOpen] = useState(0);
+  const [open, setOpen] = useState<number | null>(0);
   return (
     <section id="faq" className="py-20 md:py-28 px-6 bg-[#12121a]/50">
       <div className="max-w-2xl mx-auto">
@@ -351,10 +352,8 @@ function Footer() {
       <div className="max-w-5xl mx-auto">
         <div className="flex flex-col sm:flex-row items-start justify-between gap-5 mb-8">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-md bg-gradient-to-br from-[#ff2d7e] to-[#a855f7] flex items-center justify-center">
-              <Bot className="w-3.5 h-3.5 text-white" />
-            </div>
-            <span className="font-semibold text-sm text-white">AI Fan Agency</span>
+            <BrandMark size={28} />
+            <BrandWordmark />
           </div>
           <div className="flex gap-6 text-xs text-[#a0a0b0]">
             <a href="#features" className="hover:text-white transition-colors">Features</a>
@@ -362,6 +361,13 @@ function Footer() {
             <a href="#faq" className="hover:text-white transition-colors">FAQ</a>
             <a href="#contact" className="hover:text-white transition-colors">Contact</a>
           </div>
+        </div>
+        <div className="mb-6 border-t border-white/10 pt-5" data-founder-credit>
+          <p className="text-[13px] leading-7 text-[#b4aebf]">
+            <span className="inline-block">Made by <strong className="font-medium text-[#ece8f3]">Dan Engelsman</strong></span>{' '}
+            <span className="inline-block"><span className="px-1 text-[#a855f7]" aria-hidden="true">·</span> Founder of Agentic Solutions</span>{' '}
+            <span className="inline-block"><span className="px-1 text-[#a855f7]" aria-hidden="true">·</span> Holland, MI</span>
+          </p>
         </div>
         <div className="border-t border-white/5 pt-6">
           <p className="text-xs text-[#86868b] leading-relaxed max-w-3xl">
@@ -379,6 +385,7 @@ export default function App() {
     <div className="min-h-screen bg-[#0a0a0f] text-[#f5f5f7]">
       <Navbar />
       <Hero />
+      <PersonaShowcase />
       <Features />
       <HowItWorks />
       <WhyDisclosed />
